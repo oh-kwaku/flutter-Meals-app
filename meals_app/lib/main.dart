@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:meals_app/screens/categories.dart';
 
 final theme=ThemeData(
   useMaterial3: true,
@@ -23,6 +24,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -42,7 +44,8 @@ class App extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-    //  home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      
+      home: CategoriesScreen()
     );
   }
 }
