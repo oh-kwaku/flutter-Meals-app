@@ -26,4 +26,24 @@ const availableCategories=[
   , title: 'Light and  loosely',
   color: Colors.purple
   ),
+    Category(
+    id: 'c7'
+  , title: 'german',
+  color: Colors.yellow
+  ),
+  Category(
+    id: 'c5'
+  , title: 'exotic',
+  color: Colors.lightGreen
+  ),
+  Category(
+    id: 'c6'
+  , title: 'breakfast',
+  color: Colors.lightBlue
+  ),
+  Category(
+    id: 'c8'
+  , title: 'French',
+  color: Colors.red
+  ),
  ];
