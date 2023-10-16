@@ -31,3 +31,24 @@ Practicing flutter
 
 ## To show checkbox, use can use 
     ```SwitchListTile``` widget
+## WillPopScope Widget
+    This can be used to pass data to parent when drawer is closed. It used when you need to determine when the user taps on the back button whether the physical one or the one on the screen.
+    We can pass value by using the 
+    ```
+    onWillPop:() async {
+        Navigator.of(context).pop({data to return});
+    return false;
+    }
+    ```
+    To receive the result returned, you need to make the function that calls the screen that contains the WillPopScope widget async, then retrieve it from Navigator
+    ```
+
+    void _setScreen (String identifiter)async{
+        final result=await  Navigator.of(context).push<Map<Filter ,bool>>(MaterialPageRoute(builder: (ctx)=>const FilterScreen()));
+    }
+
+    ```
+    NB: 
+        - Navigator.Pop returns a dynamic object, you can specify a return type in the push<TypeToReturn>
+        - Navigator returns Future so the calling method/function needs to be async.
+

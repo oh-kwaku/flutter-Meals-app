@@ -62,11 +62,13 @@ void _showInfoMessage(String message){
       activePage=MealsScreen(title: "Favorites", meals: _favoriteMeals,onToggleFavorite: _toggleMealFavoriteStatus,);
     }
 
-    void _setScreen (String identifiter){
+    void _setScreen (String identifiter)async{
       Navigator.of(context).pop();
         if(identifiter.toUpperCase()=="FILTERS"){
-          Navigator.of(context).push(MaterialPageRoute(builder: (ctx)=>const FilterScreen()));
+        final result=await  Navigator.of(context).push<Map<Filter ,bool>>(MaterialPageRoute(builder: (ctx)=>const FilterScreen()));
+         print(result);
         }else{
+          //do nothing. We're just showing the home screen;
           //Navigator.of(context).pop();
         }
     }
