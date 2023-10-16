@@ -23,3 +23,11 @@ Practicing flutter
 ## SingleChildScrollWidget vrs ListView
     Thought both elements provide scrollablitity, ListView requires additional effors to center items- items are left aligned by default.
     With SingleChildScrollWidget, you do not specify page size, and elements are centered by default.
+## Drawer
+ ScaffoldWidght has drawer properyt which can be used to display drawers
+
+## ListTile
+
+
+## To show checkbox, use can use 
+    ```SwitchListTile``` widget
